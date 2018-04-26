@@ -1,0 +1,4 @@
+<web-view class="web_view"
+          wx:if="{{case}}"
+          src="https://ap.icolor.com.cn/xcx-vr/index.html?type={{type}}&style={{style}}&case={{case}}"
+></web-view>

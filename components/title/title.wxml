@@ -1,0 +1,5 @@
+<!--标题-->
+<view class="title-box">
+    <text class="title-msg">{{title}}</text>
+    <slot></slot>
+</view>

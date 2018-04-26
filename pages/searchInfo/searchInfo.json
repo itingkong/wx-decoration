@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "iColor 服务标准",
+  "usingComponents": {
+    "phone": "../../base/phone/phone",
+    "search-detail": "../../components/search-detail/search-detail"
+  }
+}

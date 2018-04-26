@@ -1,0 +1,69 @@
+@import "../../libs/styles/_mixin.scss";
+
+
+.wx-swiper-dots {
+    bottom:rpx(-10);
+}
+
+.standard {
+
+    &_title {
+        height: rpx(88);
+        line-height: rpx(88);
+        font-size: rpx(26);
+        color: #333;
+        text-align: center;
+
+        .strong {
+            font-weight: bold;
+        }
+    }
+    &_kv {
+        position: relative;
+
+        &_wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+
+            text {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                font-size: rpx(22);
+                line-height: rpx(36);
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+    &_swiper {
+        width: rpx(710);
+        margin: 0 auto;
+
+        &_item {
+            position: relative;
+        }
+
+        &_info {
+            position: absolute;
+            width: rpx(520);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            line-height: rpx(36);
+            font-size: rpx(22);
+            color: #fff;
+            text-align: center;
+        }
+    }
+    &_content {
+        image {
+            height:rpx(400);
+        }
+    }
+}

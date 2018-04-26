@@ -1,0 +1,18 @@
+<view wx:if="{{isHide}}"
+      class="fixed-wrap">
+	<view class="info-wrap">
+		<view  wx:if="{{pageData.id}}" class="img-wrap">
+			<image  src="{{imgUrl}}service/users/{{pageData.id}}_1.jpg" mode="widthFix"></image>
+		</view>
+		
+		<view class="text-info">
+			<view class="item">{{name}}{{pageData.name}}</view>
+			<view class="item">{{sex}}{{pageData.sex}}</view>
+			<view class="item">{{number}}{{pageData.workNumber}}</view>
+			<view class="item">{{provice}}{{pageData.provices}}</view>
+			<view class="item">{{city}}{{pageData.city}}</view>
+		</view>
+		<text class="iconfont icon-cha1" bindtap="close"></text>
+	</view>
+
+</view>

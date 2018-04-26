@@ -1,0 +1,80 @@
+<view class="case_details">
+    <!-- 精选案例banner -->
+    <swiper class="case_details_swiper"
+            indicator-dots="{{dots.show}}"
+            indicator-color="{{dots.color}}"
+            indicator-active-color="{{dots.atColor}}">
+        <block wx:for="{{pageInfo.kv}}"
+               wx:for-item="swiper"
+               wx:for-index="idx"
+               wx:key="idx">
+            <swiper-item class="swiper_item">
+                <image src="{{imgUrl}}{{swiper}}"
+                       mode="widthFix"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <!-- 精选案例信息 -->
+    <view class="case_details_info">
+        <view class="name">{{pageInfo.name}}</view>
+        <block wx:for="{{pageInfo.info}}"
+               wx:for-item="info"
+               wx:for-index="idx"
+               wx:key="idx">
+            <text class="info">{{info}}</text>
+        </block>
+        <view class="des">{{pageInfo.des}}</view>
+        <navigator url="/pages/signup/signup">
+            <view class="btn">{{btn}}</view>
+        </navigator>
+    </view>
+    <split></split>
+
+    <!-- 物料明细 -->
+    <title title="{{detailsTitle}}"></title>
+    <scroll-view class="case_details_goodsList"
+                 scroll-x=true
+    >
+        <view class="case_details_goodsItem"
+              wx:for="{{pageInfo.goodsDetails}}"
+              wx:for-item="goods"
+              wx:for-index="idx"
+              wx:key="idx">
+            <image class="goods"
+                   src="{{imgUrl}}{{goods.src}}"></image>
+            <text class="name">{{goods.name}}</text>
+        </view>
+    </scroll-view>
+    <split></split>
+
+    <!--施工前中后-->
+    <view class="case_details_work">
+        <block wx:for="{{pageInfo.workType}}"
+               wx:for-item="work"
+               wx:for-index="idx"
+               wx:key="idx">
+            <title title="{{work.title}}"></title>
+            <swiper class="case_details_workSwiper"
+                    indicator-dots="{{work.dots}}"
+                    indicator-color="{{dots.color}}"
+                    indicator-active-color="{{dots.atColor}}">
+                <block wx:for="{{work.swiper}}"
+                       wx:for-item="swiper"
+                       wx:for-index="idx"
+                       wx:key="idx">
+                    <swiper-item class="swiper_item">
+                        <image src="{{imgUrl}}{{swiper.src}}"
+                               mode="widthFix"></image>
+                        <view class="des">{{swiper.des}}</view>
+                    </swiper-item>
+                </block>
+            </swiper>
+            <split></split>
+        </block>
+
+    </view>
+    <signup-btn></signup-btn>
+    <!--拨打400电话-->
+    <phone></phone>
+</view>

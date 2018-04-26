@@ -1,0 +1,40 @@
+<!-- 局装服务流程 -->
+<view class="process">
+    <title title="局装服务流程"></title>
+    <view class="process-list">
+        <view class="process-list-item">
+            <text class="iconTitle iconfont icon-juzhuang-4"></text>
+            <text class="intro">上门测量</text>
+            <text class="iconRight iconfont icon-jiantou1"></text>
+        </view>
+        <view class="process-list-item">
+            <text class="iconTitle iconfont icon-juzhuang-2"></text>
+            <text class="intro">绘制图纸</text>
+            <text class="iconRight iconfont icon-jiantou1"></text>
+        </view>
+        <view class="process-list-item">
+            <text class="iconTitle iconfont icon-juzhuang-"></text>
+            <text class="intro">报价签约</text>
+            <text class="iconRight iconfont icon-jiantou1"></text>
+        </view>
+        <view class="process-list-item">
+            <text class="iconTitle iconfont icon-juzhuang-1"></text>
+            <text class="intro">施工交底</text>
+            <text class="iconRight iconfont icon-jiantou1"></text>
+        </view>
+        <view class="process-list-item">
+            <text class="iconTitle iconfont icon-juzhuang-5"></text>
+            <text class="intro">标准化施工</text>
+            <text class="iconRight iconfont icon-jiantou1"></text>
+        </view>
+        <view class="process-list-item">
+            <text class="iconTitle iconfont icon-juzhuang-6"></text>
+            <text class="intro">竣工验收</text>
+            <text class="iconRight iconfont icon-jiantou1"></text>
+        </view>
+        <view class="process-list-item">
+            <text class="iconTitle iconfont icon-juzhuang-3"></text>
+            <text class="intro">售后质保</text>
+        </view>
+    </view>
+</view>

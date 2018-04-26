@@ -1,0 +1,29 @@
+.construct_title_wrap {
+  color: #333;
+  text-align: center;
+  padding-top: 34rpx; }
+  .construct_title_wrap text {
+    display: block; }
+.construct_title_small {
+  font-size: 20rpx;
+  margin-bottom: 18rpx; }
+.construct_title_main {
+  font-size: 34rpx;
+  font-weight: bold; }
+.construct_content {
+  padding-top: 30rpx; }
+  .construct_content .details {
+    padding: 30rpx; }
+    .construct_content .details text {
+      display: block; }
+      .construct_content .details text.title {
+        font-size: 24rpx;
+        color: #000;
+        margin-bottom: 20rpx;
+        font-weight: bold; }
+      .construct_content .details text.description {
+        font-size: 22rpx;
+        color: #1b1b1b;
+        line-height: 30rpx; }
+
+/*# sourceMappingURL=construct-technology.wxss.map */

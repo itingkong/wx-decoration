@@ -1,0 +1,105 @@
+/* MIXIN */
+page {
+  background-color: #f2f2f2; }
+
+.package .kv {
+  position: relative; }
+.package .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 48rpx;
+  text-align: center;
+  letter-spacing: 10rpx; }
+  .package .text:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -16rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2rpx;
+    background-color: #fff; }
+.package_tab {
+  display: flex;
+  background: #fff; }
+  .package_tab .tab_item {
+    position: relative;
+    flex: 1;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #999999; }
+    .package_tab .tab_item:after {
+      content: '';
+      position: absolute;
+      left: 10%;
+      bottom: 0;
+      width: 80%;
+      height: 2px;
+      background-color: #62dbdb;
+      opacity: 0; }
+    .package_tab .tab_item.active {
+      color: #333333; }
+      .package_tab .tab_item.active:after {
+        opacity: 1; }
+.package_list {
+  padding: 30rpx 20rpx 120rpx; }
+.package_item {
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-bottom: 40rpx;
+  box-shadow: 0 0 20rpx 0 #d6d5d5; }
+  .package_item .hot {
+    position: absolute;
+    top: -4rpx;
+    right: 40rpx;
+    width: 60rpx; }
+  .package_item .title {
+    font-size: 30rpx;
+    color: #333333;
+    font-weight: bold;
+    line-height: 40rpx; }
+  .package_item .case_info {
+    padding: 40rpx;
+    display: none;
+    background: #fff; }
+    .package_item .case_info.show {
+      display: block; }
+  .package_item .tags {
+    display: inline-block; }
+  .package_item .case_tag {
+    position: relative;
+    line-height: 36rpx;
+    color: #999999;
+    font-size: 18rpx;
+    margin-left: 28rpx; }
+    .package_item .case_tag:last-of-type.line {
+      text-decoration: line-through; }
+    .package_item .case_tag:not(:first-of-type):after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 18rpx;
+      background-color: #999999;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -14rpx; }
+  .package_item .newPrice {
+    margin-left: 15rpx;
+    font-size: 22rpx;
+    color: #333; }
+  .package_item .case_des {
+    display: block;
+    color: #333333;
+    margin-top: 12rpx;
+    font-size: 24rpx;
+    line-height: 32rpx; }
+
+/*# sourceMappingURL=package-list.wxss.map */

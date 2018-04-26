@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/experience-list/experience-list",
+    "pages/experience-details/experience-details",
+    "pages/package-list/package-list",
+    "pages/package-details/package-details",
+    "pages/webView/webView",
+    "pages/service-standard/service-standard",
+    "pages/construct-technology/construct-technology",
+    "pages/material-standard/material-standard",
+    "pages/signup/signup",
+    "pages/searchInfo/searchInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "iColor 爱客装修",
+    "navigationBarTextStyle": "black"
+  }
+}

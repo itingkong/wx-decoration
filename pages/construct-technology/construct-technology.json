@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "iColor 施工工艺",
+  "usingComponents": {
+    "split": "../../base/split/split",
+    "phone": "../../base/phone/phone"
+  }
+}

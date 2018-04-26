@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "split": "../../base/split/split",
+    "process": "../../base/process/process",
+    "signup-btn": "../../components/signup-btn/signup-btn",
+    "title": "../../components/title/title",
+    "phone": "../../base/phone/phone"
+  }
+}

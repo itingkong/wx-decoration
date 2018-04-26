@@ -1,0 +1,373 @@
+<!-- 页面首页 -->
+<!--kv-->
+<view class="kv">
+    <swiper class="kv-swiper"
+            indicator-active-color="#00cacf"
+            circular=true
+            autoplay=true
+            interval='3500'
+            duration='300'>
+        <block wx:for="{{kvSwiper}}"
+               wx:key="unique">
+            <swiper-item>
+                <image src="{{imgUrl}}{{item.img}}{{version}}"
+                       mode="widthFix"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!-- 产品入口 -->
+<view class="links product-links">
+    <view class="links-items">
+        <navigator url="/pages/package-list/package-list?type=kitchen"
+                   class="link"
+                   hover-class="navigator-hover">
+            <text class="iconfont icon-tubiaozhizuomoban-1"></text>
+            <text class="info">厨房体验馆</text>
+        </navigator>
+    </view>
+    <view class="links-items">
+        <navigator url="/pages/package-list/package-list?type=bathroom"
+                   class="link"
+                   hover-class="navigator-hover">
+            <text class="iconfont icon-tubiaozhizuomoban-2"></text>
+            <text class="info">卫浴体验馆</text>
+        </navigator>
+    </view>
+    <view class="links-items">
+        <navigator url="/pages/designer-channel/designer-channel"
+                   class="link"
+                   hover-class="navigator-hover">
+            <text class="iconfont icon-sheji"></text>
+            <text class="info">设计体验馆</text>
+        </navigator>
+    </view>
+    <view class="links-items">
+        <navigator url="/pages/experience-list/experience-list"
+                   class="link"
+                   hover-class="navigator-hover">
+            <text class="iconfont icon-tubiaozhizuomoban-"></text>
+            <text class="info">厨卫直播间</text>
+        </navigator>
+    </view>
+</view>
+
+<split></split>
+
+<!-- 服务标准入口 -->
+<view class="links nav-links">
+    <view class="links-items">
+        <navigator url="/pages/material-standard/material-standard"
+                   class="link"
+                   hover-class="navigator-hover">
+            <text class="iconfont icon-yanxuandanpin1"></text>
+            <text class="info">严选单品</text>
+        </navigator>
+    </view>
+    <view class="links-items">
+        <navigator url="/pages/service-standard/service-standard"
+                   class="link"
+                   hover-class="navigator-hover">
+            <text class="iconfont icon--4"></text>
+            <text class="info">优质服务</text>
+        </navigator>
+    </view>
+    <view class="links-items">
+        <navigator url="/pages/construct-technology/construct-technology"
+                   class="link"
+                   hover-class="navigator-hover">
+            <text class="iconfont icon--1"></text>
+            <text class="info">施工工艺</text>
+        </navigator>
+    </view>
+
+    <view class="links-items">
+        <navigator url="/pages/searchInfo/searchInfo"
+                   class="link"
+                   hover-class="navigator-hover">
+            <text class="iconfont icon--2"></text>
+            <text class="info">服务人员</text>
+        </navigator>
+    </view>
+</view>
+
+<split></split>
+
+<!-- 优势 -->
+<view class="advantage">
+    <swiper indicator-dots=true
+            indicator-active-color="#00cacf"
+            circular=true
+            autoplay=true
+            interval='3500'
+            duration='300'>
+        <block wx:for="{{advantageSwiper}}"
+               wx:key="unique">
+            <swiper-item>
+                <navigator url="/pages/{{item.url}}/{{item.url}}"
+                           hover-class="navigator-hover">
+                    <image class="slide-image"
+                           src="{{imgUrl}}{{item.img}}{{version}}"
+                           mode="widthFix"/>
+                    <view class="slide-info">
+                        <text class="title">{{item.title}}</text>
+                        <text class="intro">{{item.intro}}</text>
+                        <text class="more">了解更多</text>
+                    </view>
+                </navigator>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<split></split>
+
+<!-- 全景体验馆厨房 -->
+<view class="vr" wx:if="vrKitchen">
+    <title title="全景体验馆 · 厨房">
+        <navigator url="/pages/package-list/package-list?style=kitchen">
+            <text class="more">MORE>></text>
+        </navigator>
+    </title>
+    <navigator class="vr-box"
+               url="/pages/package-details/package-details?code={{vrKitchen.data[0].code}}"
+    >
+        <image src="{{commonUrl}}{{vrKitchen.mainImageURL}}"
+               mode="widthFix"
+        ></image>
+        <image class="hot"
+               wx:if="{{vrKitchen.data[0].hot}}"
+               src="{{commonImg}}hot.png"
+               mode="widthFix"
+        ></image>
+        <view class="case-box">
+            <text class="title">{{vrKitchen.data[0].name}}</text>
+            <text class="intro">{{vrKitchen.data[0].description}}</text>
+            <view class="info-box">
+                <text class="item">{{vrKitchen.data[0].acreage}}㎡ |</text>
+                <text class="item">{{vrKitchen.data[0].juZhuangType}} |</text>
+                <text class="item">{{vrKitchen.data[0].decorationStyle}} |</text>
+                <text class="item {{vrKitchen.data[0].discountPrice>0 ? 'oldPrice' : ''}}">￥{{vrKitchen.data[0].totalPrice}}</text>
+                <view class="newPrice" wx:if="{{vrKitchen.data[0].discountPrice>0}}">￥{{vrKitchen.data[0]}}</view>
+            </view>
+        </view>
+    </navigator>
+    <scroll-view class="vr-list"
+                 scroll-x=true
+    >
+        <view class="item"
+              wx:for="{{vrKitchen.data}}"
+              wx:for-item="item"
+              wx:key="unique"
+        >
+            <navigator wx:if="{{vrKitchen.data[index+1]}}" url="/pages/package-details/package-details?code={{vrKitchen.data[index+1].code}}">
+                <image class="img"
+                       src="{{commonUrl}}{{item.imgUrl}}{{version}}"
+                       mode="widthFix"
+                ></image>
+                <view class="intro">{{vrKitchen.data[index+1].description}}</view>
+            </navigator>
+        </view>
+    </scroll-view>
+</view>
+
+<split></split>
+
+<!-- 全景体验馆卫浴 -->
+<view class="vr" wx:if="vrBathroom">
+    <title title="全景体验馆 · 卫浴">
+        <navigator url="/pages/package-list/package-list?type=bathroom&style=space">
+            <text class="more">MORE>></text>
+        </navigator>
+    </title>
+    <navigator class="vr-box"
+               url="/pages/package-details/package-details?type=bathroom&style=life&case={{vr.bathroom.navigator}}"
+    >
+        <image src="{{imgUrl}}{{vr.bathroom.url}}{{version}}"
+               mode="widthFix"
+        ></image>
+        <image class="hot"
+               src="{{commonImg}}hot.png"
+               mode="widthFix"
+        ></image>
+        <text class="title">{{vr.bathroom.title}}</text>
+        <text class="intro">{{vr.bathroom.intro}}</text>
+        <view class="info-box {{vr.bathroom.newPrice.length>0 ? 'price' : ''}}">
+            <view class="info {{vr.bathroom.info.length-1 === idx?'last':''}}"
+                  wx:for="{{vr.bathroom.info}}"
+                  wx:for-item="item"
+                  wx:for-index="idx"
+                  wx:key="unique"
+            >
+                <text class="item">{{item}}</text>
+                <text class="line">|</text>
+            </view>
+            <view class="new-price" wx:if="{{vr.bathroom.newPrice.length>0}}">{{vr.bathroom.newPrice}}</view>
+        </view>
+    </navigator>
+    <scroll-view class="vr-list"
+                 scroll-x=true
+    >
+        <view class="item"
+              wx:for="{{vr.bathroom.imgList}}"
+              wx:for-item="item"
+              wx:key="unique"
+        >
+            <navigator
+                    url="/pages/package-details/package-details?type=bathroom&style={{item.style}}&case={{item.navigator}}">
+                <image class="img"
+                       src="{{imgUrl}}{{item.imgUrl}}{{version}}"
+                       mode="widthFix"
+                ></image>
+                <view class="intro">{{item.intro}}</view>
+            </navigator>
+        </view>
+    </scroll-view>
+</view>
+
+<split></split>
+
+<!-- 局装服务流程 -->
+<process></process>
+
+<split></split>
+
+<!-- 他们都选择了icolor -->
+<view class="choose">
+    <title title="他们都选择了iColor"></title>
+    <view class="case"
+          wx:if="{{choose.length>0}}"
+          wx:for="{{choose}}"
+          wx:for-item="group"
+          wx:key="unique"
+    >
+        <view class="case-box">
+            <view class="case-list">
+                <view class="case-item"
+                      wx:for="{{group.imgUrls}}"
+                      wx:for-item="item"
+                      wx:key="unique"
+                >
+                    <navigator url="/pages/experience-details/experience-details?code={{group.code}}"
+                               class="link"
+                               hover-class="navigator-hover">
+                        <image src="{{commonUrl}}{{item}}"
+                               mode="widthFix"
+                        ></image>
+                    </navigator>
+                </view>
+            </view>
+            <text class="title">{{group.name}}</text>
+            <view class="case-info">
+                <text class="info">地址：{{group.city}}·{{group.houseName}}</text>
+                <text class="info">面积：{{group.acreage}}㎡</text>
+                <text class="info">类型：{{group.juZhuangType}}</text>
+                <text class="info">价格：￥{{group.totalPrice}}</text>
+            </view>
+        </view>
+        <split></split>
+    </view>
+</view>
+
+<!-- 优质服务 让您省心省力 -->
+<view class="service">
+    <title title="优质服务 让您省心省力"></title>
+    <view class="service-box">
+        <view class="service-content">
+            <view class="service-content-left">
+                <image src="{{imgUrl}}service1.jpg{{version}}"
+                       mode="widthFix"
+                ></image>
+            </view>
+            <view class="service-content-right">
+                <text class="title">专属家居顾问<br/>一对一全程服务</text>
+                <text class="intro">从需求沟通到现场施工，24小时随时在线待命。</text>
+            </view>
+        </view>
+        <view class="service-content">
+            <view class="service-content-left">
+                <text class="title">专业施工管家<br/>严格把控施工质量</text>
+                <text class="intro">五大智能化统筹管理，施工现场直播每日微信播报。</text>
+            </view>
+            <view class="service-content-right">
+                <image src="{{imgUrl}}service2.jpg{{version}}"
+                       mode="widthFix"
+                ></image>
+            </view>
+        </view>
+        <view class="service-content bg">
+            <view class="service-content-left">
+                <text class="title">尊享售后服务<br/>免除后顾之忧</text>
+                <text class="intro">提供售后质保卡，基础项目2<br/>年质保水电防渗漏5年质保。</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<split></split>
+
+<!-- 超强施工团队  -->
+<view class="team">
+    <title title="超强施工团队"></title>
+    <view class="team-list">
+        <view class="team-item"
+              wx:for="{{team}}"
+              wx:for-item="item"
+              wx:key="unique"
+        >
+            <image class="team-bg"
+                   src="{{imgUrl}}{{item.url}}{{version}}"
+                   mode="widthFix"
+            ></image>
+            <view class="team-content">
+                <text class="title">{{item.title}}</text>
+                <text class="intro">{{item.intro}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<split></split>
+
+<!-- 超高施工标准  -->
+<view class="standard">
+    <title title="超高施工标准"></title>
+    <view class="standard-list">
+        <view class="standard-item"
+              wx:for="{{standard}}"
+              wx:for-item="item"
+              wx:key="unique"
+        >
+            <image src="{{imgUrl}}{{item.url}}{{version}}"
+                   mode="widthFix"
+            ></image>
+            <text class="standard-text">{{item.text}}</text>
+        </view>
+    </view>
+</view>
+
+<split></split>
+
+<!-- iColor战略合作伙伴 -->
+<view class="partner">
+    <title title="iColor战略合作伙伴"></title>
+    <view class="partner-list">
+        <view class="partner-item"
+              wx:for="{{partner}}"
+              wx:for-item="item"
+              wx:key="unique"
+        >
+            <image src="{{imgUrl}}{{item.url}}{{version}}"
+                   mode="widthFix"
+            ></image>
+        </view>
+    </view>
+</view>
+
+<split></split>
+
+<signup-btn></signup-btn>
+
+<!--拨打400电话-->
+<phone></phone>

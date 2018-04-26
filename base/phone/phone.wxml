@@ -1,0 +1,4 @@
+<view class="phone">
+    <image src="{{commonImg}}{{src}}"
+    bindtap="call"></image>
+</view>

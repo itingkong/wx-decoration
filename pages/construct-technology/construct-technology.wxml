@@ -1,0 +1,26 @@
+<!-- 施工工艺 -->
+
+<view>
+    <view class="construct_title_wrap">
+        <text class="construct_title_small">{{title}}</text>
+        <text class="construct_title_main">{{mianTitle}}</text>
+    </view>
+
+
+    <view class="construct_content"
+          wx:for="{{construct}}"
+          wx:key="unique"
+    >
+        <image class="images"
+               src="{{imgUrl}}{{item.src}}"
+               mode="widthFix"
+        ></image>
+        <view class="details">
+            <text class="title">{{item.title}}</text>
+            <text class="description">{{item.des}}</text>
+        </view>
+        <split></split>
+    </view>
+    <!--拨打400电话-->
+    <phone></phone>
+</view>

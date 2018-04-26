@@ -1,0 +1,140 @@
+@import "../../libs/styles/_mixin.scss"; /* MIXIN */
+
+page {
+  background-color: #f2f2f2;
+}
+
+.package {
+  .kv {
+    position: relative;
+  }
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: rpx(48);
+    text-align: center;
+    letter-spacing: rpx(10);
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: rpx(-16);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: rpx(2);
+      background-color: #fff;
+    }
+  }
+
+  &_tab {
+    display: flex;
+    background: #fff;
+    .tab_item {
+      position: relative;
+      flex: 1;
+      height: rpx(60);
+      line-height: rpx(60);
+      text-align: center;
+      font-size: rpx(24);
+      color: #999999;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 10%;
+        bottom: 0;
+        width: 80%;
+        height: 2px;
+        background-color: #62dbdb;
+        opacity: 0;
+      }
+
+      &.active {
+        color: #333333;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &_list {
+    padding: rpx(30) rpx(20) rpx(120);
+  }
+
+  &_item {
+    position: relative;
+    border-radius: rpx(10);
+    overflow: hidden;
+    margin-bottom: rpx(40);
+    box-shadow: 0 0 rpx(20) 0 #d6d5d5;
+
+    .hot {
+      position: absolute;
+      top:rpx(-4);
+      right: rpx(40);
+      width: rpx(60);
+    }
+
+    .title {
+      font-size: rpx(30);
+      color: #333333;
+      font-weight: bold;
+      line-height: rpx(40);
+    }
+
+    .case_info {
+      padding: rpx(40);
+      display: none;
+      background: #fff;
+      &.show {
+        display: block;
+      }
+    }
+    .tags {
+      display: inline-block;
+    }
+    .case_tag {
+      position: relative;
+      line-height: rpx(36);
+      color: #999999;
+      font-size: rpx(18);
+      margin-left: rpx(28);
+      &:last-of-type {
+        &.line {
+          text-decoration: line-through;
+        }
+      }
+      &:not(:first-of-type) {
+        &:after {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: rpx(18);
+          background-color: #999999;
+          top: 50%;
+          transform: translateY(-50%);
+          left: rpx(-14);
+        }
+      }
+    }
+
+    .newPrice {
+      margin-left: rpx(15);
+      font-size: rpx(22);
+      color: #333;
+    }
+
+    .case_des {
+      display: block;
+      color: #333333;
+      margin-top: rpx(12);
+      font-size: rpx(24);
+      line-height: rpx(32);
+    }
+  }
+}

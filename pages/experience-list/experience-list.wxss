@@ -1,0 +1,42 @@
+/* MIXIN */
+page {
+  padding-bottom: 150rpx;
+  background: #f2f2f2; }
+
+.case-list {
+  margin-top: 40rpx;
+  padding: 0 36rpx; }
+  .case-list-item:not(:last-of-type) {
+    margin-bottom: 35rpx; }
+  .case-list-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14rpx;
+    border-radius: .1rem;
+    border: 1px solid #d7d7d7;
+    box-shadow: 0 2rpx 8rpx #d7d7d7;
+    background: #fff; }
+  .case-list-img {
+    flex: 0 0 280rpx;
+    width: 280rpx; }
+  .case-list-info {
+    flex: 0 0 340rpx;
+    width: 340rpx; }
+    .case-list-info .title {
+      margin-bottom: 30rpx;
+      font-size: 28rpx;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .case-list-info .intro {
+      display: block;
+      font-size: 24rpx;
+      color: #a3a3a3;
+      line-height: 40rpx;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+
+/*# sourceMappingURL=experience-list.wxss.map */

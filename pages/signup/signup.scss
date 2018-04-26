@@ -1,0 +1,104 @@
+@import "../../libs/styles/_mixin.scss"; /* MIXIN */
+@import '../../components/msg-box/msg-box';
+
+.signup {
+    &-form {
+        padding-top: rpx(65);
+        text-align: center;
+        background: #fff url("https://ap.icolor.com.cn/wxjzxcx/images/common/form-bg.jpg") no-repeat 0 0 / 100% auto;
+
+        .title {
+            font-size: rpx(60);
+            font-weight: bold;
+            color: $color-main;
+
+            &-little {
+                font-size: rpx(36);
+                color: #333;
+            }
+        }
+    }
+
+    &-box {
+        margin: rpx(65) rpx(40) 0;
+        text-align: left;
+        
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: row wrap;
+            padding: 0 rpx(10);
+            border-radius: rpx(10);
+            border: 1px solid #d7d7d7;
+            background: #fff;
+            &-box {
+                display: flex;
+                align-items: center;
+            }
+            &.noBorder {
+                border: 0;
+            }
+            &:not(:last-of-type) {
+                margin-bottom: rpx(40);
+            }
+
+            .iconfont {
+                position: relative;
+                display: block;
+                width: rpx(80);
+                height: rpx(90);
+                font-size: rpx(50);
+                line-height: rpx(90);
+                color: $color-main;
+                text-align: center;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 20%;
+                    right: 0;
+                    height: 60%;
+                    border-right: 1px solid #d7d7d7;
+                }
+            }
+            input {
+                display: block;
+                padding-left: rpx(30);
+                width: rpx(530);
+                height: rpx(90);
+                font-size: rpx(36);
+                color: #333;
+                line-height: rpx(90);
+                box-sizing: border-box;
+                &.code {
+                    width: rpx(300);
+                }
+            }
+            .vcode {
+                width: rpx(225);
+                height: rpx(72);
+            }
+
+            .intro {
+                display: block;
+                width: 100%;
+                font-size: rpx(20);
+                color: #a3a3a3;
+                &:last-of-type {
+                    margin-top: rpx(10);
+                }
+
+                .note {
+                    color: #ff9152;
+                }
+            }
+            .send {
+                width: 100%;
+                font-size: rpx(30);
+                color: #fff;
+                line-height: rpx(80);
+                background: $color-main;
+            }
+        }
+    }
+}

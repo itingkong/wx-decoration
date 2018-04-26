@@ -1,0 +1,18 @@
+@import "../../libs/styles/_mixin.scss"; /* MIXIN */
+
+.title {
+    &-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rpx(30);
+    }
+
+    &-msg {
+        padding-left: rpx(20);
+        font-size: rpx(36);
+        font-weight: 700;
+        color: #333;
+        border-left: rpx(5) solid $color-main;
+    }
+}

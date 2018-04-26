@@ -1,0 +1,115 @@
+<view class="details">
+    <!-- 轮播图 -->
+    <view class="kv" >
+        <navigator url="/pages/webView/webView?type={{vrType}}&style={{vrStyle}}&case={{vrCase}}">
+            <image src="{{imgUrl}}{{caseDetails.kv}}"
+                   mode="widthFix"
+                   wx:if="{{caseDetails.kv}}"
+            ></image>
+        </navigator>
+    </view>
+    <!-- 案例信息 -->
+    <view class="details_info">
+        <text class="details_info_des">{{caseDetails.des}}</text>
+        <text class="details_info_name">{{caseDetails.name}}</text>
+        <block wx:for="{{caseDetails.tags}}"
+               wx:for-item="tag"
+               wx:key="unique">
+            <text class="details_info_tags">{{tag}}</text>
+        </block>
+        <navigator url="/pages/signup/signup">
+            <view class="signup-btn">{{btn}}</view>
+        </navigator>
+    </view>
+    <split></split>
+
+    <!-- 物料明细 -->
+    <title title="{{title.details}}"></title>
+    <scroll-view scroll-x=true
+                 class="details_goods_list"
+    >
+        <view class="details_goods_item"
+              wx:for="{{goodsDetails}}"
+              wx:for-item="goods"
+              wx:key="unique">
+            <image src="{{imgUrl}}goods/{{goods.id}}/{{goods.id}}_1.jpg"
+                   mode="widthFix"
+                   data-id="{{goods.id}}"
+                   bindtap="showDetails"></image>
+            <text class="name">{{goods.brand}}·{{goods.name}}</text>
+        </view>
+    </scroll-view>
+    <split></split>
+
+
+    <!-- 个性升级配置 -->
+    <title title="{{title.configure}}"></title>
+    <scroll-view scroll-x=true
+                 class="details_configure_list">
+        <view class="details_configure_item"
+              wx:if="{{optionsData}}"
+              wx:for="{{case.configure}}"
+              wx:for-item="configure"
+              wx:key="unique"
+        >
+            <image src="{{imgUrl}}goods/{{configure.id}}/{{configure.id}}_1.jpg"
+                   data-id="{{configure.id}}"
+                   bindtap="showOptionsDetails"></image>
+            <text class="name">
+                {{optionsData[configure.id].brand}}·{{optionsData[configure.id].name}}
+            </text>
+        </view>
+    </scroll-view>
+    <split></split>
+
+    <!-- 施工管理体系 -->
+    <title title="{{title.system}}"></title>
+    <view class="details_system_list">
+        <view class="details_system_item"
+              wx:for="{{case.system}}"
+              wx:for-item="system"
+              wx:key="unique"
+        >
+            <i class="iconfont {{system.icon}}"></i>
+            <text class="des">{{system.info}}</text>
+        </view>
+    </view>
+    <split></split>
+
+    <!-- 用户评论 -->
+    <title title="{{title.comment}}"></title>
+    <view class="details_comment_list">
+        <view class="details_comment_item"
+              wx:for="{{case.comment}}"
+              wx:for-item="comment"
+              wx:key="unique"
+        >
+            <view class="details_comment_userInfo">
+                <image class="advantageLogo"
+                       src="{{imgUrl}}{{comment.advantageLogo}}"
+                       mode="widthFix"></image>
+                <text class="advantageName">{{comment.advantageName}}</text>
+                <text class="date">{{comment.date}}</text>
+            </view>
+            <view class="details_comment_info">
+                <text class="info">{{comment.commontInfo}}</text>
+            </view>
+
+            <view class="details_comment_img {{comment.hasCommentImg == 'true' ? 'show' : ''}}">
+                <image src="{{imgUrl}}{{comment.CommentImg}}"></image>
+            </view>
+        </view>
+    </view>
+    <!-- 报名按钮 -->
+    <signup-btn></signup-btn>
+
+    <!-- 物料明细 商品弹窗 -->
+    <goods-details target-id="{{goodsAlert.id}}"
+                   isHide="{{goodsAlert.isHide}}"
+                   pageData="{{goodsAlert.pageData}}"
+                   slideList="{{goodsAlert.slideList}}"></goods-details>
+
+</view>
+
+<!--拨打400电话-->
+<phone></phone>

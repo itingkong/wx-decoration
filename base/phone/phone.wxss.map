@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,MAAO;EACH,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,GAAG;EACR,KAAK,EAAE,CAAC;EACR,iBAAiB,EAAE,gBAAgB;EACnC,SAAS,EAAE,gBAAgB;EAC3B,OAAO,EAAE,EAAE;EACX,YAAM;IACF,KAAK,EAAE,MAAQ;IACf,MAAM,EAAE,MAAQ",
+"sources": ["phone.scss"],
+"names": [],
+"file": "phone.wxss"
+}

@@ -1,0 +1,359 @@
+@import "../../libs/styles/_mixin.scss"; /* MIXIN */
+
+page {
+  padding-bottom: rpx(120);
+
+  .more {
+    font-size: rpx(26);
+    color: $color-main;
+  }
+}
+
+.kv {
+  height: rpx(420);
+
+  &-swiper {
+    height: 100%;
+  }
+}
+
+/* 导航 */
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  text-align: center;
+
+  .links-items {
+    position: relative;
+    flex: 0 0 25%;
+    width: 25%;
+
+    .link {
+      padding: rpx(25) 0 rpx(20);
+    }
+    .iconfont {
+      display: inline-block;
+      width: rpx(90);
+      height: rpx(90);
+      font-size: rpx(90);
+      color: #00cacf;
+      line-height: rpx(90);
+      border-radius: 50%;
+      background: #f9f9f9;
+      &.icon-- {
+        &4 {
+          color: #ea4b49;
+        }
+        &2 {
+          color: #feae02;
+        }
+        &1 {
+          color: #42aeff;
+        }
+        &5 {
+          color: #f5ad16;
+        }
+      }
+    }
+    .info {
+      display: block;
+      margin-top: rpx(5);
+      font-size: rpx(26);
+      color: #333;
+    }
+  }
+}
+
+/* 优势 */
+.advantage {
+  position: relative;
+  height: rpx(260);
+
+  swiper {
+    height: 100%;
+  }
+  .slide-info {
+    position: absolute;
+    top: rpx(50);
+    left: rpx(60);
+    color: #333;
+
+    .title {
+      font-size: rpx(36);
+    }
+    .intro {
+      display: block;
+      font-size: rpx(30);
+    }
+    .more {
+      display: block;
+      margin-top: rpx(20);
+      width: rpx(150);
+      height: rpx(50);
+      font-size: rpx(26);
+      text-align: center;
+      line-height: rpx(50);
+      border: 1px solid $color-main;
+      border-radius: rpx(20);
+    }
+  }
+}
+
+/* 720 */
+.vr {
+  &-box {
+    position: relative;
+    text {
+      display: block;
+    }
+    .hot {
+      position: absolute;
+      top: rpx(-4);
+      right: rpx(40);
+      width: rpx(60);
+    }
+    .case-box {
+      margin: rpx(20) rpx(30) 0;
+      .title {
+        font-size: rpx(30);
+        font-weight: 700;
+        color: #333;
+      }
+      .intro {
+        margin-top: rpx(20);
+        font-size: rpx(30);
+        font-weight: 700;
+        color: $color-main;
+      }
+    }
+    .info-box {
+      margin-top: rpx(20);
+      font-size: 0;
+      color: #333;
+      .item {
+        display: inline-block;
+        margin-right: rpx(5);
+        font-size: rpx(26);
+        vertical-align: top;
+      }
+      .oldPrice {
+        margin-right: 0;
+        text-decoration: line-through;
+      }
+      .newPrice {
+        display: inline-block;
+        margin-left: rpx(10);
+        font-size: rpx(26);
+        vertical-align: top;
+      }
+    }
+  }
+  &-list {
+    margin-top: rpx(30);
+    padding: 0 rpx(35) rpx(10);
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    .item {
+      display: inline-block;
+      width: rpx(200);
+      vertical-align: top;
+      &:not(:last-of-type) {
+        margin-right: rpx(25);
+      }
+
+      .img {
+        border-radius: rpx(10);
+      }
+      .intro {
+        margin-top: rpx(15);
+        font-size: rpx(26);
+        color: #333;
+        @include msgHide;
+      }
+    }
+  }
+}
+
+/* 他们都选择了icolor */
+.choose {
+  .case {
+    &:not(:first-of-type) {
+      margin-top: rpx(30);
+    }
+
+    &-box {
+      margin: 0 rpx(30);
+      padding-bottom: rpx(30);
+
+      .title {
+        display: block;
+        margin: rpx(15) 0;
+        font-size: rpx(30);
+        color: #333;
+      }
+    }
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-item {
+      flex: 0 0 31%;
+      width: 31%;
+    }
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: rpx(10);
+      font-size: rpx(26);
+      color: #5c5c5c;
+
+      .info {
+        flex: 0 0 50%;
+        width: 50%;
+        @include msgHide;
+      }
+    }
+  }
+}
+
+/* 优质服务 */
+.service {
+  padding-bottom: rpx(40);
+
+  &-box {
+    margin: 0 rpx(30);
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    &.bg {
+      height: rpx(340);
+      background: url("https://ap.icolor.com.cn/wxjzxcx/images/index/service3.jpg") no-repeat 0 0 / 100% 100%;
+
+      .service-content-left {
+        padding-left: rpx(15);
+      }
+    }
+    &:not(:last-of-type) {
+      margin-bottom: rpx(20);
+    }
+
+    .title {
+      display: block;
+      font-size: rpx(28);
+    }
+    .intro {
+      display: block;
+      margin-top: rpx(10);
+      font-size: rpx(20);
+    }
+
+    &-left {
+      width: rpx(290);
+    }
+    &-right {
+      width: rpx(375);
+    }
+  }
+}
+
+/* 超强施工团队 */
+.team {
+  padding-bottom: rpx(35);
+
+  &-list {
+    margin: 0 rpx(30);
+  }
+
+  &-item {
+    position: relative;
+    border-radius: rpx(10);
+    overflow: hidden;
+    &:not(:last-of-type) {
+      margin-bottom: rpx(20);
+    }
+  }
+  &-content {
+    position: absolute;
+    left: rpx(30);
+    top: 50%;
+    color: #333;
+    transform: translateY(-50%);
+
+    .title {
+      display: block;
+      font-size: rpx(30);
+      font-weight: 700;
+    }
+    .intro {
+      display: block;
+      margin-top: rpx(5);
+      font-size: rpx(24);
+      line-height: 1.5;
+    }
+  }
+}
+
+/* 超高施工标准 */
+.standard {
+  padding-bottom: rpx(40);
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+    margin: 0 rpx(35);
+  }
+  &-item {
+    position: relative;
+    flex: 0 0 rpx(316);
+    width: rpx(316);
+    &:nth-of-type(n+3) {
+      margin-top: rpx(40);
+    }
+  }
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding: rpx(15) rpx(10);
+    font-size: rpx(22);
+    color: #333;
+    text-align: center;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, .9);
+    transform: translateY(-50%);
+  }
+}
+
+/* iColor战略合作伙伴 */
+.partner {
+  padding-bottom: rpx(30);
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+    margin: 0 rpx(30);
+  }
+  &-item {
+    flex: 0 0 rpx(200);
+    width: rpx(200);
+    &:nth-of-type(n+4) {
+      margin-top: rpx(40);
+    }
+  }
+}

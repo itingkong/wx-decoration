@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "signup-btn": "../../components/signup-btn/signup-btn",
+    "phone": "../../base/phone/phone"
+  }
+}

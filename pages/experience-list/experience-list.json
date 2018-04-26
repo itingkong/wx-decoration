@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "iColor 实景案例",
+  "usingComponents": {
+    "signup-btn": "../../components/signup-btn/signup-btn",
+    "phone": "../../base/phone/phone"
+  }
+}

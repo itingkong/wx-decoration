@@ -1,0 +1,28 @@
+.img-wrap {
+  display: inline-block;
+  width: 200rpx;
+  margin-left: 25rpx; }
+
+image {
+  border-radius: 10rpx;
+  overflow: hidden;
+  border: 1rpx solid #dcdcdc;
+  box-shadow: 0 10rpx 10rpx 0 #dcdcdc; }
+
+.scroll-view {
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: 20rpx 20rpx 20rpx 0; }
+
+.name-wrap {
+  font-size: 20rpx;
+  line-height: 24rpx;
+  margin-top: 20rpx;
+  color: #333333;
+  text-align: center; }
+  .name-wrap .goods-name,
+  .name-wrap .goods-brand {
+    display: block; }
+
+/*# sourceMappingURL=material-standard.wxss.map */

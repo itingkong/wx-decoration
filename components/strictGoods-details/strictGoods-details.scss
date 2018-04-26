@@ -1,0 +1,141 @@
+@import "../../libs/styles/_mixin";
+@import "../../libs/styles/iconfont";
+
+.details {
+	&_wrap {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, .5);
+		z-index: 999;
+	}
+	&_content {
+		position: absolute;
+		width: 90%;
+		left: 5%;
+		top: 50%;
+		transform: translateY(-50%);
+
+		&_wrap {
+			width: 100%;
+			background-color: #fff;
+			padding: rpx(40) 0;
+			border-radius: rpx(20);
+		}
+
+		.btn {
+			margin: rpx(30) auto 0;
+			width: rpx(86);
+			height: rpx(86);
+			font-size: rpx(40);
+			color: #fff;
+			text-align: center;
+			line-height: rpx(86);
+			border-radius: 50%;
+			border: 1px solid #fff;
+			box-sizing: border-box;
+		}
+	}
+
+	&_top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 0 .4rem;
+
+		&_left {
+			width: rpx(300);
+			image {
+				width: rpx(300);
+				height: rpx(300);
+				border: 1px solid #d2d2d2;
+				box-sizing: border-box;
+			}
+		}
+
+		&_right {
+			width: rpx(280);
+			color: #333;
+			.title {
+				font-size: rpx(30);
+				font-weight: 700;
+				@include hideLineText;
+			}
+			.tag_info {
+				margin-top: rpx(15);
+				font-size: rpx(20);
+				color: #878787;
+			}
+
+			.goods_info {
+				margin-top: rpx(15);
+				font-size: rpx(24);
+				.item {
+					@include hideLineText;
+				}
+			}
+		}
+	}
+
+	&_choose {
+		margin-top: rpx(20);
+		.title {
+			position: relative;
+			margin-bottom: rpx(30);
+			padding-left: rpx(40);
+			font-size: rpx(26);
+			font-weight: 500;
+			color: #21cace;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: rpx(170);
+				width: rpx(480);
+				height: rpx(1);
+				background: #e3e3e3;
+			}
+		}
+
+		.desc {
+			font-size: rpx(26);
+			line-height: rpx(36);
+			padding:0 rpx(30);
+			color: #333;
+			box-sizing: border-box;
+		}
+
+		.scroll {
+			&_list {
+				width: 100%;
+				white-space: nowrap;
+			}
+
+			&_item {
+				margin-right: rpx(20);
+				display: inline-block;
+				width: rpx(200);
+				vertical-align: middle;
+
+				&:first-of-type {
+					margin-left: rpx(20);
+				}
+				&.active {
+					image {
+						border-color: #2cf1f6;
+					}
+				}
+				image {
+					width: rpx(200);
+					height: rpx(200);
+					border: 1px solid #d2d2d2;
+					box-sizing: border-box
+				}
+			}
+		}
+	}
+}

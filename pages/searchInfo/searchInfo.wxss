@@ -1,0 +1,77 @@
+.des {
+  font-size: 26rpx;
+  color: #333;
+  padding: 0 40rpx;
+  margin: 40rpx 0 30rpx 0;
+  box-sizing: border-box; }
+
+.warn-info {
+  font-size: 20rpx;
+  color: #8f8d8e;
+  padding: 0 40rpx;
+  box-sizing: border-box; }
+  .warn-info .warn {
+    color: #911b1b; }
+
+.search-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid #ddd;
+  overflow: hidden; }
+  .search-wrap input {
+    display: block;
+    padding-left: 5%;
+    flex: 0 0 77%;
+    width: 77%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx; }
+  .search-wrap .button {
+    display: block;
+    flex: 0 0 18%;
+    width: 18%;
+    background: #2fb8be;
+    color: #fff;
+    height: 80rpx;
+    border-radius: 0;
+    text-align: center; }
+    .search-wrap .button .icon-fangdajing {
+      font-size: 60rpx;
+      line-height: 80rpx; }
+
+.personal-list {
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #fafafa; }
+  .personal-list .header {
+    background-color: #2fb8be; }
+    .personal-list .header .personal-name,
+    .personal-list .header .personal-province,
+    .personal-list .header .personal-city,
+    .personal-list .header .personal-code {
+      color: #fff; }
+  .personal-list .personal-name,
+  .personal-list .personal-province,
+  .personal-list .personal-city,
+  .personal-list .personal-code {
+    display: inline-block;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #000; }
+  .personal-list .personal-name,
+  .personal-list .personal-province,
+  .personal-list .personal-city {
+    width: 20%; }
+  .personal-list .personal-code {
+    width: 40%; }
+  .personal-list .none-search {
+    display: inline-block;
+    width: 270rpx;
+    height: 180rpx;
+    margin: 100rpx auto 40rpx; }
+
+/*# sourceMappingURL=searchInfo.wxss.map */

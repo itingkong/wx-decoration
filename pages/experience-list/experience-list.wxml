@@ -1,0 +1,31 @@
+<!--案例列表-->
+<view class="case-list">
+    <view class="case-list-item"
+          wx:for="{{caseList.list}}"
+          wx:for-index="idx"
+          wx:key="idx"
+    >
+        <navigator class="case-list-content"
+                   url="/pages/experience-details/experience-details?type={{item.type}}&case={{item.case}}"
+                   hover-class="navigator-hover">
+            <image class="case-list-img"
+                   src="{{imgUrl}}{{item.img}}"
+                   mode="widthFix"
+            ></image>
+            <view class="case-list-info">
+                <view class="title">{{item.title}}</view>
+                <text class="intro"
+                      wx:for="{{item.msg}}"
+                      wx:for-item="msg"
+                      wx:for-index="idx"
+                      wx:key="idx"
+                >{{msg.intro}}</text>
+            </view>
+        </navigator>
+    </view>
+</view>
+
+<signup-btn></signup-btn>
+
+<!--拨打400电话-->
+<phone></phone>

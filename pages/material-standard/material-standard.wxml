@@ -1,0 +1,44 @@
+<!-- 选材标准页面 -->
+<view class="goodsList"
+      wx:if="{{goodsList}}">
+	<block wx:for="{{goodsList}}"
+	       wx:for-item="goods"
+	       wx:for-index="index"
+	       wx:key="index">
+		<title title="{{goods.title}}"></title>
+		<scroll-view scroll-x
+		             scroll-with-animation="true"
+		             wx:if="{{goods.list}}"
+		             class="scroll-view"
+		>
+			<view class="img-wrap"
+			      wx:for="{{goods.list}}"
+			      wx:for-item="detail"
+			      wx:for-index="idx"
+			      wx:key="idx"
+			>
+				<image src="{{imgUrl}}/{{detail}}/{{detail}}_1.jpg{{version}}"
+				       mode="widthFix"
+				       data-id="{{detail}}"
+				       bindtap="showDetails"
+				></image>
+				
+				<view class="name-wrap"
+				      wx:if="{{detailList}}">
+					<text class="goods-name">{{detailList[detail].name}}</text>
+					<text class="goods-brand">{{detailList[detail].brand}}</text>
+				</view>
+			</view>
+		</scroll-view>
+		<split></split>
+	</block>
+</view>
+
+<!-- 点击图片显示的弹窗 -->
+<strictGoods-details isHide="{{singleDetails.showDetails}}"
+                     pageData="{{singleDetails.pageData}}"
+                     slideList ="{{singleDetails.slideList}}"
+                     targetId = "{{singleDetails.pageData.id}}"></strictGoods-details>
+
+<!--拨打400电话-->
+<phone></phone>

@@ -1,0 +1,17 @@
+/* MIXIN */
+.signup-btn {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 19;
+  padding: 20rpx 30rpx;
+  border-top: 1rpx solid #d7d7d7;
+  background: #fff; }
+  .signup-btn .button {
+    font-size: 36rpx;
+    color: #fff;
+    line-height: 80rpx;
+    background: #00cacf; }
+
+/*# sourceMappingURL=signup-btn.wxss.map */

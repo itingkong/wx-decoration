@@ -1,0 +1,21 @@
+@import "../../libs/styles/_mixin.scss"; /* MIXIN */
+
+.signup {
+    &-btn {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 19;
+        padding: rpx(20) rpx(30);
+        border-top: rpx(1) solid #d7d7d7;
+        background: #fff;
+
+        .button {
+            font-size: rpx(36);
+            color: #fff;
+            line-height: rpx(80);
+            background: $color-main;
+        }
+    }
+}

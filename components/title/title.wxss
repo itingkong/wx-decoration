@@ -1,0 +1,14 @@
+/* MIXIN */
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx; }
+.title-msg {
+  padding-left: 20rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #333;
+  border-left: 5rpx solid #00cacf; }
+
+/*# sourceMappingURL=title.wxss.map */

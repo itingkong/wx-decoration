@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+// 颜色定义规范
+$color-main: #00cacf;
+
+// 单行省略 @include msgHide()
+@mixin msgHide() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin hideLineText($line: 2) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    overflow: hidden;
+}
+
+// width: rpx(100)
+@function rpx($value) {
+    @return $value * 1rpx;
+}

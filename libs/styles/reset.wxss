@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* Css重置 */
+text {
+  line-height: 1.2; }
+
+image {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+/*# sourceMappingURL=reset.wxss.map */

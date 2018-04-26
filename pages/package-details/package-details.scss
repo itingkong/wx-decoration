@@ -1,0 +1,217 @@
+@import "../../libs/styles/_mixin.scss"; /* MIXIN */
+
+
+html,
+body {
+    position: relative;
+}
+.details {
+    padding-bottom: rpx(120);
+    &_info {
+        position: relative;
+        padding: rpx(50) rpx(30) rpx(50) rpx(20);
+        &_des {
+            display: block;
+            font-size: rpx(30);
+            color: #00cacf;
+            line-height: rpx(40);
+            margin-bottom: rpx(30);
+        }
+
+        &_name {
+            display: block;
+            font-size: rpx(26);
+            line-height: rpx(26);
+            color: #333333;
+            font-weight: bold;
+            margin-bottom: rpx(10);
+        }
+
+        &_tags {
+            position: relative;
+            font-size: rpx(26);
+            line-height: rpx(26);
+            color: #a3a3a3;
+            margin-right: rpx(60);
+            &:after {
+                content: '';
+                position: absolute;
+                height: rpx(26);
+                width: rpx(2);
+                background-color: #a3a3a3;
+                right: rpx(-30);
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:last-of-type {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        .signup-btn {
+            position: absolute;
+            right: rpx(30);
+            bottom: rpx(50);
+            width: rpx(140);
+            height: rpx(50);
+            line-height: rpx(50);
+            text-align: center;
+            border-radius: rpx(10);
+            background-color: #ffab46;
+            color: #ffffff;
+            font-size: rpx(26);
+        }
+    }
+    &_system {
+
+        &_list {
+            display: flex;
+            justify-content: center;
+            padding-bottom: rpx(50);
+        }
+
+        &_item {
+            flex: 1;
+            text-align: center;
+            .iconfont {
+                color: #00cacf;
+            }
+            .des {
+                display: block;
+                color: #333;
+                font-size: rpx(16);
+                line-height: rpx(26);
+                margin-top: rpx(15);
+            }
+        }
+    }
+    &_configure {
+        &_list {
+            width: 100%;
+            white-space: nowrap;
+            padding-bottom: rpx(30);
+        }
+
+        &_item {
+            display: inline-block;
+            margin-right:rpx(25);
+            width: rpx(200);
+            vertical-align: middle;
+            text-align: center;
+            &:first-of-type {
+                margin-left: rpx(25);
+            }
+
+            image {
+                height: rpx(200);
+                border:rpx(1) solid #dddcdc;
+                box-shadow: 0 rpx(5) rpx(10) 0 #dddcdc;
+                box-sizing: border-box;
+                margin-bottom: rpx(10);
+            }
+
+            .name {
+                display: block;
+                font-size: rpx(22);
+                color: #333;
+            }
+        }
+    }
+    &_comment {
+        &_list {
+            padding: 0 rpx(30);
+            border-top: rpx(1) solid #dddddd;
+        }
+
+        &_item {
+            padding: rpx(30) 0 rpx(45);
+            &:not(:last-of-type) {
+                border-bottom: rpx(1) solid #dddddd;
+            }
+        }
+
+        &_userInfo {
+            margin-bottom: rpx(30);
+            line-height: rpx(90);
+            position: relative;
+
+            .advantageLogo {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: rpx(20);
+                border-radius: 50%;
+                width: rpx(100);
+                height: rpx(100);
+            }
+
+            .advantageName {
+                font-size: rpx(30);
+                color: #333333;
+            }
+
+            .date {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: rpx(30);
+                font-size: rpx(26);
+                color: #999999;
+            }
+
+        }
+
+        &_info {
+            font-size: rpx(26);
+            line-height: rpx(36);
+            color: #333333;
+            margin-bottom: rpx(25);
+        }
+
+        &_img {
+            display: none;
+
+            &.show {
+                display: block;
+            }
+            image {
+                width: rpx(240);
+                height: rpx(150);
+            }
+        }
+    }
+
+    &_goods {
+        &_list {
+            width: 100%;
+            white-space: nowrap;
+            padding-bottom: rpx(30);
+        }
+
+        &_item {
+            display: inline-block;
+            width: rpx(200);
+            margin-right: rpx(25);
+            vertical-align: middle;
+            text-align: center;
+            &:first-of-type {
+                margin-left: rpx(25);
+            }
+
+            image {
+                width: rpx(200);
+                height: rpx(200);
+                border: rpx(1) solid #dddcdc;
+                box-shadow: 0 rpx(5) rpx(10) 0 #dddcdc;
+                box-sizing: border-box;
+                margin-bottom: rpx(10);
+            }
+
+            .name {
+                font-size: rpx(22);
+                color: #333;
+            }
+        }
+    }
+}

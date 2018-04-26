@@ -1,0 +1,70 @@
+<!-- 套餐列表页面 -->
+<view class="package">
+    <view class="kv">
+        <image class="kv"
+               mode="widthFix"
+               src="{{imgUrl}}{{result.kv}}"
+        ></image>
+        <text class="text">{{result.text}}</text>
+    </view>
+
+    <view class="package_tab"
+          bindtap="switchTab"
+          wx:if="{{tab}}"
+    >
+        <view data-tag="1"
+              data-type="life"
+              class="tab_item {{showTag == 1 ? 'active' : ''}}"
+        >{{tab1}}
+        </view>
+        <view data-tag="2"
+              data-type="space"
+              class="tab_item {{showTag == 2 ? 'active' : ''}}"
+        >{{tab2}}
+        </view>
+        <view data-tag="3"
+              data-type="garden"
+              class="tab_item {{showTag == 3 ? 'active' : ''}}"
+        >{{tab3}}
+        </view>
+
+    </view>
+
+    <view class="package_list">
+        <view class="package_item"
+              wx:for="{{result.caseList}}"
+              wx:for-item="case"
+              wx:key="unique">
+            <view>
+                <navigator class="case-list-content"
+                           url="/pages/package-details/package-details?type={{case.type}}&style={{case.style}}&case={{case.navigator}}"
+                           hover-class="navigator-hover">
+                <image class="case_img"
+                       src="{{imgUrl}}{{case.imgUrl}}"
+                       mode="widthFix"></image>
+                </navigator>
+                <image class="hot"
+                       src="{{imgUrl}}common/hot.png"
+                       wx:if="{{case.hot}}"
+                       mode="widthFix"
+                ></image>
+                <view class="case_info {{ case.hasInfo == 'true' ? 'show' : ''}}">
+                    <text class="title">{{case.title}}</text>
+                    <view class="tags">
+                        <text class="case_tag {{case.newPrice ? 'line' : ''}}"
+                              wx:for="{{case.tags}}"
+                              wx:for-item="tag"
+                              wx:key="unique"
+                        >{{tag}}</text>
+                    </view>
+                    <text class="newPrice" wx:if="{{case.newPrice}}">{{case.newPrice}}</text>
+                    <text class="case_des">{{case.des}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <signup-btn></signup-btn>
+    <!--拨打400电话-->
+    <phone></phone>
+</view>

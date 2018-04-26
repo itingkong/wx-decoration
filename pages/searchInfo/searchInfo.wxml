@@ -1,0 +1,59 @@
+<!-- 优质服务页面 -->
+<view class="standard_kv">
+	<image src="{{imgUrl}}index/kv.jpg"
+	       class="standard_kv_image"
+	       mode="widthFix"
+	></image>
+	<view class="des">
+		<text> 每一位iColor的施工人员都经过严格培训，获得认证后才能上岗，他们熟悉iColor的产品和施工工艺，为您提供更优质和放心的服务。</text>
+	</view>
+	<view class="warn-info">
+		<text class="warn">＊特别提醒：</text>
+		<text>为避免因证件假冒而导致您的利益受损，您可在iColor爱客装修官网核实家居顾问证件吊牌上的个人信息。</text>
+	</view>
+	
+	<view class="search-wrap">
+		<input placeholder="请输入姓名关键词"
+		       id="search"
+		       name="search"
+		       bindinput="bindKeyInput" />
+		<button class="button" bindtap="search">
+			<text class="iconfont icon-fangdajing"></text>
+		</button>
+	</view>
+	
+	<!-- 人员信息 -->
+	<view>
+		<view class=".personal-list">
+			<view class="header">
+				<view class="personal-name">姓名</view>
+				<view class="personal-province">省份</view>
+				<view class="personal-city">城市</view>
+				<view class="personal-code">证书编号</view>
+			</view>
+			<view wx:if="{{Detail}}">
+				<view wx:for="{{Detail}}"
+				      wx:for-item="detail"
+				      wx:key="index"
+				      bindtap="showDetails">
+					<view class="personal-name" data-id="{{detail.id}}">{{detail.name}}</view>
+					<view class="personal-province" data-id="{{detail.id}}">{{detail.provinces}}</view>
+					<view class="personal-city" data-id="{{detail.id}}">{{detail.city}}</view>
+					<view class="personal-code" data-id="{{detail.id}}">{{detail.workNumber}}</view>
+				</view>
+			</view>
+			
+			<view wx:if="{{Detail.length<1}}">
+				<image src="{{imgUrl}}service/search-bg.jpg"
+				       class="none-search"></image>
+				<view class="error">抱歉，未找到符合要求的人员信息</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 弹窗插件组件 -->
+<search-detail isHide="{{searchList.isHide}}"
+               pageData="{{searchList.info}}"></search-detail>
+<!--拨打400电话-->
+<phone></phone>

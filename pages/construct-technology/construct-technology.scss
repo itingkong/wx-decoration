@@ -1,0 +1,46 @@
+@import "../../libs/styles/_mixin.scss";
+
+.construct {
+    &_title {
+        &_wrap {
+            color: #333;
+            text-align: center;
+            padding-top: rpx(34);
+            text {
+                display: block;
+            }
+        }
+
+        &_small {
+            font-size: rpx(20);
+            margin-bottom: rpx(18);
+        }
+
+        &_main {
+            font-size: rpx(34);
+            font-weight: bold;
+        }
+    }
+
+    &_content {
+        padding-top: rpx(30);
+
+        .details {
+            padding: rpx(30);
+            text {
+                display: block;
+                &.title {
+                    font-size: rpx(24);
+                    color: #000;
+                    margin-bottom: rpx(20);
+                    font-weight: bold;
+                }
+                &.description {
+                    font-size: rpx(22);
+                    color: #1b1b1b;
+                    line-height: rpx(30);
+                }
+            }
+        }
+    }
+}

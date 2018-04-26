@@ -1,0 +1,39 @@
+@import "../../libs/styles/_mixin.scss";    /* MIXIN */
+@import "../../libs/styles/iconfont.scss";  /* 字体图标引入 */
+
+.process {
+	padding-bottom: rpx(35);
+
+    &-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-item {
+            position: relative;
+            flex: 0 0 14.28%;
+            width: 14.28%;
+            text-align: center;
+
+            .iconTitle {
+                font-size: rpx(60);
+                color: $color-main;
+            }
+            .intro {
+                display: block;
+                margin-top: rpx(10);
+                font-size: rpx(20);
+                color: #333;
+                line-height: 1.4;
+                @include msgHide;
+            }
+            .iconRight {
+                position: absolute;
+                top: rpx(25);
+                right: rpx(-10);
+                font-size: rpx(20);
+                color: #333;
+            }
+        }
+    }
+}

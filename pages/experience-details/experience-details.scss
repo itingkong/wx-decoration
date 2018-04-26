@@ -1,0 +1,105 @@
+@import "../../libs/styles/_mixin.scss"; /* MIXIN */
+
+
+.case_details {
+    &_swiper {
+        height: rpx(460);
+    }
+
+    &_info {
+        position: relative;
+        padding-bottom: rpx(50);
+        .name {
+            font-size: rpx(30);
+            line-height: rpx(90);
+            color: #333;
+            margin-left: rpx(25);
+        }
+
+        .info {
+            font-size: rpx(26);
+            color: #a3a3a3;
+            line-height: rpx(40);
+            margin:0  rpx(25);
+
+            &:last-of-type {
+                display: block;
+            }
+        }
+
+        .des {
+            font-size: rpx(26);
+            line-height: rpx(36);
+            color: #a3a3a3;
+            padding: 0 rpx(25);
+            box-sizing: border-box;
+            margin-top: rpx(40);
+        }
+
+        .btn {
+            position: absolute;
+            top:rpx(120);
+            right:rpx(25);
+            width: rpx(140);
+            height:rpx(50);
+            line-height: rpx(50);
+            text-align: center;
+            color: #fff;
+            background-color: #ffab46;
+            border-radius: rpx(10);
+            font-size: rpx(26);
+            font-weight: bold;
+        }
+    }
+
+    &_goodsList {
+        width: 100%;
+        white-space: nowrap;
+        padding-bottom: rpx(30);
+    }
+
+    &_goodsItem {
+        display: inline-block;
+        margin-right:rpx(25);
+        vertical-align: middle;
+        text-align: center;
+        &:first-of-type {
+            margin-left: rpx(25);
+        }
+
+        image {
+            width: rpx(200);
+            height:rpx(200);
+            border:rpx(1) solid #dddcdc;
+            box-shadow: 0 rpx(5) rpx(10) 0 #dddcdc;
+            box-sizing: border-box;
+            margin-bottom: rpx(10);
+        }
+
+        .name {
+            font-size: rpx(22);
+            color: #333;
+        }
+    }
+
+    &_work {
+
+    }
+
+    &_workSwiper {
+        height:rpx(620);
+        .wx-swiper-dots {
+            top:rpx(420);
+        }
+        .swiper_item {
+            .des {
+                font-size: rpx(26);
+                line-height: rpx(40);
+                color: #333333;
+                font-weight: bold;
+                padding: rpx(10) rpx(25) 0;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,9 @@
+{
+	"navigationBarTitleText": "iColor 严选单品",
+	"usingComponents": {
+		"split": "../../base/split/split",
+		"phone": "../../base/phone/phone",
+		"title": "../../components/title/title",
+		"strictGoods-details": "../../components/strictGoods-details/strictGoods-details"
+	}
+}

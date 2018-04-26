@@ -1,0 +1,96 @@
+@import "../../libs/styles/_mixin.scss";
+
+.des {
+  font-size: rpx(26);
+  color: #333;
+  padding: 0 rpx(40);
+  margin: rpx(40) 0 rpx(30) 0;
+  box-sizing: border-box;
+}
+
+.warn-info {
+  font-size: rpx(20);
+  color: #8f8d8e;
+  padding: 0 rpx(40);
+  box-sizing: border-box;
+  .warn {
+    color: #911b1b;
+  }
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: rpx(30);
+  height: rpx(80);
+  border-radius: rpx(40);
+  border: rpx(1) solid #ddd;
+  overflow: hidden;
+
+  input {
+    display: block;
+    padding-left: 5%;
+    flex: 0 0 77%;
+    width: 77%;
+    height: rpx(80);
+    line-height: rpx(80);
+    font-size: rpx(30);
+  }
+  .button {
+    display: block;
+    flex: 0 0 18%;
+    width: 18%;
+    background: #2fb8be;
+    color: #fff;
+    height: rpx(80);
+    border-radius: 0;
+    text-align: center;
+    .icon-fangdajing {
+      font-size: rpx(60);
+      line-height: rpx(80);
+    }
+  }
+}
+
+.personal-list {
+  font-size: rpx(30);
+  text-align: center;
+  background-color: #fafafa;
+  .header {
+    background-color: #2fb8be;
+
+    .personal-name,
+    .personal-province,
+    .personal-city,
+    .personal-code {
+      color: #fff;
+    }
+  }
+  .personal-name,
+  .personal-province,
+  .personal-city,
+  .personal-code {
+    display: inline-block;
+    height: rpx(80);
+    line-height: rpx(80);
+    color: #000;
+  }
+  .personal-name,
+  .personal-province,
+  .personal-city {
+    width: 20%;
+  }
+
+  .personal-code {
+    width: 40%;
+  }
+
+  .none-search {
+    display: inline-block;
+    width: rpx(270);
+    height: rpx(180);
+    margin: rpx(100) auto rpx(40);
+  }
+
+}

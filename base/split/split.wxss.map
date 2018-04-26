@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAyC,WAAW;AAEpD,MAAO;EACN,MAAM,EAAE,KAAO;EACZ,UAAU,EAAE,OAAO",
+"sources": ["split.scss"],
+"names": [],
+"file": "split.wxss"
+}

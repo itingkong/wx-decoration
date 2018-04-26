@@ -1,0 +1,15 @@
+<template name="msgBox">
+    <!--消息提示框-->
+    <view class="msg-box {{showMsgBox.status ? '' : 'hide'}}"
+          bindtap="hidePopup"
+    >
+        <view class="msg-content">
+            <text class="loading"
+                  wx:if="{{showMsgBox.loading}}"
+            ></text>
+            <text class="text"
+                  wx:if="{{showMsgBox.text}}"
+            >{{showMsgBox.text}}</text>
+        </view>
+    </view>
+</template>

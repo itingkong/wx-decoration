@@ -1,0 +1,54 @@
+@import "../../libs/styles/_mixin.scss"; /* MIXIN */
+
+page {
+    padding-bottom: rpx(150);
+    background: #f2f2f2;
+}
+
+.case {
+    &-list {
+        margin-top: rpx(40);
+        padding: 0 rpx(36);
+
+        &-item {
+            &:not(:last-of-type) {
+                margin-bottom: rpx(35);
+            }
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: rpx(14);
+            border-radius: .1rem;
+            border: 1px solid #d7d7d7;
+            box-shadow: 0 rpx(2) rpx(8) #d7d7d7;
+            background: #fff;
+        }
+
+        &-img {
+            flex: 0 0 rpx(280);
+            width: rpx(280);
+            //height: rpx(210);
+        }
+
+        &-info {
+            flex: 0 0 rpx(340);
+            width: rpx(340);
+
+            .title {
+                margin-bottom: rpx(30);
+                font-size: rpx(28);
+                color: #333;
+                @include msgHide;
+            }
+            .intro {
+                display: block;
+                font-size: rpx(24);
+                color: #a3a3a3;
+                line-height: rpx(40);
+                @include msgHide;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "split": "../../base/split/split",
+    "signup-btn": "../../components/signup-btn/signup-btn",
+    "title": "../../components/title/title",
+    "goods-details": "../../components/goods-details/goods-details",
+    "phone": "../../base/phone/phone"
+  }
+}

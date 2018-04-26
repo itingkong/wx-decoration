@@ -1,0 +1,85 @@
+<!-- 优质服务页面 -->
+<view class="standard_kv">
+    <image src="{{imgUrl}}standard/s-kv.jpg"
+           class="standard_kv_image"
+           mode="widthFix"
+    ></image>
+    <view class="standard_kv_wrap">
+        <text>专属家居顾问/专业施工管家/5年售后质保\n为家保驾护航，让您省心省力！</text>
+    </view>
+</view>
+
+<view class="standard_title">
+    <text>专属家居顾问 一对一全程服务</text>
+</view>
+
+<swiper class="standard_swiper"
+        indicator-dots="true"
+        indicator-color="#c7c7c7"
+        indicator-active-color="#00cacf">
+    <block wx:for="{{swiperInfoOne}}"
+           wx:for-item="img"
+           wx:key="unique">
+        <swiper-item class="standard_swiper_item">
+            <text class="standard_swiper_info">{{img.text}}</text>
+            <image src="{{imgUrl}}{{img.src}}"
+                   mode="widthFix"
+            ></image>
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class="standard_title">
+    <text>专业施工管家 严格把控施工质量</text>
+</view>
+
+<view class="standard_content ">
+    <image src="{{imgUrl}}standard/s3.jpg"
+           mode="widthFix"
+    ></image>
+</view>
+
+<view class="standard_title">
+    <text>超高难度的梦想改造家施工过程也
+        <text class="strong">由iColor施工督导监管完成！</text>
+    </text>
+</view>
+
+
+<swiper class="standard_swiper"
+        indicator-dots="true"
+        indicator-color="#c7c7c7"
+        indicator-active-color="#00cacf">
+    <block wx:for="{{swiperInfoTwo}}"
+           wx:for-item="src"
+           wx:key="unique">
+        <swiper-item class="standard_swiper_item">
+            <image src="{{imgUrl}}{{src}}"
+                   mode="widthFix"
+            ></image>
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class="standard_title">
+    <text>微信日报实况直播，让您0操心，100%放心</text>
+</view>
+
+<view class="standard_content ">
+    <image src="{{imgUrl}}standard/s4.jpg"
+           mode="widthFix"
+    ></image>
+</view>
+
+<view class="standard_title">
+    <text>尊享售后服务 免除后顾之忧</text>
+</view>
+
+<view class="standard_content">
+    <image src="{{imgUrl}}standard/s5.jpg"
+           mode="widthFix"
+    ></image>
+</view>
+
+<!--拨打400电话-->
+<phone></phone>

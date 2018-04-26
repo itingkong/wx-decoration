@@ -1,0 +1,14 @@
+@import "../../libs/styles/_mixin";
+
+.phone {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 99;
+    image {
+        width: rpx(114);
+        height: rpx(114);
+    }
+}

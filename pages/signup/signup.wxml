@@ -1,0 +1,70 @@
+<!-- 报名表单 -->
+<view class="signup-form">
+    <view class="title">1对1上门服务</view>
+    <view class="title-little">免费预约 定制您的新家</view>
+    <view class="signup-box">
+        <form bindsubmit="signup">
+            <view class="item">
+                <view class="item-box">
+                    <text class="iconfont icon-touxiang"></text>
+                    <input class="nameInp"
+                           id="name"
+                           class="name"
+                           bindblur="_nameFun"
+                           type="text"
+                           placeholder="您的称呼"
+                           data-placeholder="您的称呼"
+                           maxlength="100" />
+                </view>
+            </view>
+            <view class="item">
+                <view class="item-box">
+                    <text class="iconfont icon-dianhua"></text>
+                    <input class="phoneInp"
+                           id="phone"
+                           class="phone"
+                           bindblur="_phoneFun"
+                           type="number"
+                           placeholder="您的手机号码"
+                           data-placeholder="您的手机号码"
+                           maxlength="11" />
+                </view>
+            </view>
+            <view class="item">
+                <view class="item-box">
+                    <text class="iconfont icon-xinxi"></text>
+                    <input class="codeInp"
+                           id="code"
+                           class="code"
+                           bindblur="_codeFun"
+                           type="text"
+                           placeholder="验证码"
+                           data-placeholder="验证码"
+                           maxlength="4" />
+                </view>
+                <image class="vcode"
+                       src="{{verifyCode}}"
+                       bindtap="_refreshVerifyCode"
+                ></image>
+            </view>
+            <view class="item noBorder">
+                <text class="intro">
+                    <text class="note">*</text>仅限上海地区
+                </text>
+                <text class="intro">
+                    <text class="note">*</text>请预留您的个人信息，iColor工作人员将在24小时内与您联系，为了您的利益及我们的口碑，您的隐私将被严格保密
+                </text>
+            </view>
+            <view class="item noBorder">
+                <button class="send"
+                        form-type="submit">
+                    立即预约
+                </button>
+            </view>
+        </form>
+    </view>
+</view>
+
+<import src="../../components/msg-box/msg-box.wxml" />
+<template is="msgBox"
+          data="{{showMsgBox: showMsgBox}}" />

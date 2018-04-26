@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "iColor 精选案例",
+  "usingComponents": {
+    "title": "../../components/title/title",
+    "split": "../../base/split/split",
+    "signup-btn": "../../components/signup-btn/signup-btn",
+    "phone": "../../base/phone/phone"
+  }
+}

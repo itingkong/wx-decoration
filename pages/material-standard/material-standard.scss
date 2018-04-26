@@ -1,0 +1,33 @@
+@import "../../libs/styles/_mixin.scss";
+
+
+.img-wrap {
+	display: inline-block;
+	width: rpx(200);
+	margin-left: rpx(25);
+}
+image {
+	border-radius: rpx(10);
+	overflow: hidden;
+	border: rpx(1) solid #dcdcdc;
+	box-shadow: 0 rpx(10) rpx(10) 0 #dcdcdc;
+}
+
+.scroll-view {
+	width: 100%;
+	box-sizing: border-box;
+	white-space: nowrap;
+	padding: rpx(20) rpx(20) rpx(20) 0;
+}
+
+.name-wrap {
+	font-size: rpx(20);
+	line-height: rpx(24);
+	margin-top: rpx(20);
+	color: #333333;
+	text-align: center;
+	.goods-name,
+	.goods-brand {
+		display: block;
+	}
+}

@@ -1,0 +1,65 @@
+@import "../../libs/styles/_mixin";
+@import "../../libs/styles/iconfont";
+
+.fixed-wrap {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.8);
+	z-index: 999;
+}
+.info-wrap {
+	position: absolute;
+	width: 80%;
+	margin: 0 auto;
+	top: 50%;
+	left: 50%;
+	transform:translateX(-50%) translateY(-50%);
+	background-color: #fff;
+	-webkit-border-radius: rpx(10);
+	-moz-border-radius: rpx(10);
+	border-radius: rpx(10);
+	font-size: 0;
+	padding: rpx(20);
+
+	.iconfont {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: rpx(-160);
+		font-size: rpx(30);
+		width: rpx(80);
+		height: rpx(80);
+		text-align: center;
+		line-height: rpx(80);
+		border-radius: 50%;
+		border:rpx(1) solid #fff;
+		color: #fff;
+	}
+}
+.img-wrap {
+	display: inline-block;
+	width: rpx(240);
+	height: rpx(240);
+	vertical-align: top;
+	image {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.text-info {
+	display: inline-block;
+	vertical-align: top;
+	width: rpx(280);
+	margin-left: rpx(50);
+	font-size: rpx(30);
+	line-height: rpx(40);
+	color: #333;
+	.item {
+		margin: rpx(10) 0;
+	}
+}
+

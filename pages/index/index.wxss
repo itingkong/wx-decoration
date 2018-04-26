@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/* MIXIN */
+page {
+  padding-bottom: 120rpx; }
+  page .more {
+    font-size: 26rpx;
+    color: #00cacf; }
+
+.kv {
+  height: 420rpx; }
+  .kv-swiper {
+    height: 100%; }
+
+/* 导航 */
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  text-align: center; }
+  .links .links-items {
+    position: relative;
+    flex: 0 0 25%;
+    width: 25%; }
+    .links .links-items .link {
+      padding: 25rpx 0 20rpx; }
+    .links .links-items .iconfont {
+      display: inline-block;
+      width: 90rpx;
+      height: 90rpx;
+      font-size: 90rpx;
+      color: #00cacf;
+      line-height: 90rpx;
+      border-radius: 50%;
+      background: #f9f9f9; }
+      .links .links-items .iconfont.icon--4 {
+        color: #ea4b49; }
+      .links .links-items .iconfont.icon--2 {
+        color: #feae02; }
+      .links .links-items .iconfont.icon--1 {
+        color: #42aeff; }
+      .links .links-items .iconfont.icon--5 {
+        color: #f5ad16; }
+    .links .links-items .info {
+      display: block;
+      margin-top: 5rpx;
+      font-size: 26rpx;
+      color: #333; }
+
+/* 优势 */
+.advantage {
+  position: relative;
+  height: 260rpx; }
+  .advantage swiper {
+    height: 100%; }
+  .advantage .slide-info {
+    position: absolute;
+    top: 50rpx;
+    left: 60rpx;
+    color: #333; }
+    .advantage .slide-info .title {
+      font-size: 36rpx; }
+    .advantage .slide-info .intro {
+      display: block;
+      font-size: 30rpx; }
+    .advantage .slide-info .more {
+      display: block;
+      margin-top: 20rpx;
+      width: 150rpx;
+      height: 50rpx;
+      font-size: 26rpx;
+      text-align: center;
+      line-height: 50rpx;
+      border: 1px solid #00cacf;
+      border-radius: 20rpx; }
+
+/* 720 */
+.vr-box {
+  position: relative; }
+  .vr-box text {
+    display: block; }
+  .vr-box .hot {
+    position: absolute;
+    top: -4rpx;
+    right: 40rpx;
+    width: 60rpx; }
+  .vr-box .case-box {
+    margin: 20rpx 30rpx 0; }
+    .vr-box .case-box .title {
+      font-size: 30rpx;
+      font-weight: 700;
+      color: #333; }
+    .vr-box .case-box .intro {
+      margin-top: 20rpx;
+      font-size: 30rpx;
+      font-weight: 700;
+      color: #00cacf; }
+  .vr-box .info-box {
+    margin-top: 20rpx;
+    font-size: 0;
+    color: #333; }
+    .vr-box .info-box .item {
+      display: inline-block;
+      margin-right: 5rpx;
+      font-size: 26rpx;
+      vertical-align: top; }
+    .vr-box .info-box .oldPrice {
+      margin-right: 0;
+      text-decoration: line-through; }
+    .vr-box .info-box .newPrice {
+      display: inline-block;
+      margin-left: 10rpx;
+      font-size: 26rpx;
+      vertical-align: top; }
+.vr-list {
+  margin-top: 30rpx;
+  padding: 0 35rpx 10rpx;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap; }
+  .vr-list .item {
+    display: inline-block;
+    width: 200rpx;
+    vertical-align: top; }
+    .vr-list .item:not(:last-of-type) {
+      margin-right: 25rpx; }
+    .vr-list .item .img {
+      border-radius: 10rpx; }
+    .vr-list .item .intro {
+      margin-top: 15rpx;
+      font-size: 26rpx;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+
+/* 他们都选择了icolor */
+.choose .case:not(:first-of-type) {
+  margin-top: 30rpx; }
+.choose .case-box {
+  margin: 0 30rpx;
+  padding-bottom: 30rpx; }
+  .choose .case-box .title {
+    display: block;
+    margin: 15rpx 0;
+    font-size: 30rpx;
+    color: #333; }
+.choose .case-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.choose .case-item {
+  flex: 0 0 31%;
+  width: 31%; }
+.choose .case-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #5c5c5c; }
+  .choose .case-info .info {
+    flex: 0 0 50%;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+/* 优质服务 */
+.service {
+  padding-bottom: 40rpx; }
+  .service-box {
+    margin: 0 30rpx; }
+  .service-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333; }
+    .service-content.bg {
+      height: 340rpx;
+      background: url("https://ap.icolor.com.cn/wxjzxcx/images/index/service3.jpg") no-repeat 0 0/100% 100%; }
+      .service-content.bg .service-content-left {
+        padding-left: 15rpx; }
+    .service-content:not(:last-of-type) {
+      margin-bottom: 20rpx; }
+    .service-content .title {
+      display: block;
+      font-size: 28rpx; }
+    .service-content .intro {
+      display: block;
+      margin-top: 10rpx;
+      font-size: 20rpx; }
+    .service-content-left {
+      width: 290rpx; }
+    .service-content-right {
+      width: 375rpx; }
+
+/* 超强施工团队 */
+.team {
+  padding-bottom: 35rpx; }
+  .team-list {
+    margin: 0 30rpx; }
+  .team-item {
+    position: relative;
+    border-radius: 10rpx;
+    overflow: hidden; }
+    .team-item:not(:last-of-type) {
+      margin-bottom: 20rpx; }
+  .team-content {
+    position: absolute;
+    left: 30rpx;
+    top: 50%;
+    color: #333;
+    transform: translateY(-50%); }
+    .team-content .title {
+      display: block;
+      font-size: 30rpx;
+      font-weight: 700; }
+    .team-content .intro {
+      display: block;
+      margin-top: 5rpx;
+      font-size: 24rpx;
+      line-height: 1.5; }
+
+/* 超高施工标准 */
+.standard {
+  padding-bottom: 40rpx; }
+  .standard-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+    margin: 0 35rpx; }
+  .standard-item {
+    position: relative;
+    flex: 0 0 316rpx;
+    width: 316rpx; }
+    .standard-item:nth-of-type(n+3) {
+      margin-top: 40rpx; }
+  .standard-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding: 15rpx 10rpx;
+    font-size: 22rpx;
+    color: #333;
+    text-align: center;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-50%); }
+
+/* iColor战略合作伙伴 */
+.partner {
+  padding-bottom: 30rpx; }
+  .partner-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+    margin: 0 30rpx; }
+  .partner-item {
+    flex: 0 0 200rpx;
+    width: 200rpx; }
+    .partner-item:nth-of-type(n+4) {
+      margin-top: 40rpx; }
+
+/*# sourceMappingURL=index.wxss.map */
