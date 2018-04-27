@@ -20,7 +20,7 @@
 <!-- 产品入口 -->
 <view class="links product-links">
     <view class="links-items">
-        <navigator url="/pages/package-list/package-list?type=kitchen"
+        <navigator url="/pages/package-list/package-list?query=kitchen&cityCode={{cityCode}}"
                    class="link"
                    hover-class="navigator-hover">
             <text class="iconfont icon-tubiaozhizuomoban-1"></text>
@@ -126,13 +126,12 @@
 <!-- 全景体验馆厨房 -->
 <view class="vr" wx:if="vrKitchen">
     <title title="全景体验馆 · 厨房">
-        <navigator url="/pages/package-list/package-list?style=kitchen">
+        <navigator url="/pages/package-list/package-list?query=kitchen">
             <text class="more">MORE>></text>
         </navigator>
     </title>
     <navigator class="vr-box"
-               url="/pages/package-details/package-details?code={{vrKitchen.data[0].code}}"
-    >
+               url="/pages/package-details/package-details?code={{vrKitchen.data[0].code}}">
         <image src="{{commonUrl}}{{vrKitchen.mainImageURL}}"
                mode="widthFix"
         ></image>
@@ -163,7 +162,7 @@
         >
             <navigator wx:if="{{vrKitchen.data[index+1]}}" url="/pages/package-details/package-details?code={{vrKitchen.data[index+1].code}}">
                 <image class="img"
-                       src="{{commonUrl}}{{item.imgUrl}}{{version}}"
+                       src="{{commonImg}}{{item.imgUrl}}{{version}}"
                        mode="widthFix"
                 ></image>
                 <view class="intro">{{vrKitchen.data[index+1].description}}</view>
@@ -177,50 +176,47 @@
 <!-- 全景体验馆卫浴 -->
 <view class="vr" wx:if="vrBathroom">
     <title title="全景体验馆 · 卫浴">
-        <navigator url="/pages/package-list/package-list?type=bathroom&style=space">
+        <navigator url="/pages/package-list/package-list?query=bathroom&style=space">
             <text class="more">MORE>></text>
         </navigator>
     </title>
     <navigator class="vr-box"
-               url="/pages/package-details/package-details?type=bathroom&style=life&case={{vr.bathroom.navigator}}"
-    >
-        <image src="{{imgUrl}}{{vr.bathroom.url}}{{version}}"
+               url="/pages/package-details/package-details?query=bathroom&style=life&case={{vr.bathroom.navigator}}">
+        <image src="{{commonUrl}}{{vrBathroom.mainImageURL}}"
                mode="widthFix"
         ></image>
         <image class="hot"
+               wx:if="{{vrBathroom.data[0].hot}}"
                src="{{commonImg}}hot.png"
                mode="widthFix"
         ></image>
-        <text class="title">{{vr.bathroom.title}}</text>
-        <text class="intro">{{vr.bathroom.intro}}</text>
-        <view class="info-box {{vr.bathroom.newPrice.length>0 ? 'price' : ''}}">
-            <view class="info {{vr.bathroom.info.length-1 === idx?'last':''}}"
-                  wx:for="{{vr.bathroom.info}}"
-                  wx:for-item="item"
-                  wx:for-index="idx"
-                  wx:key="unique"
-            >
-                <text class="item">{{item}}</text>
-                <text class="line">|</text>
+        <view class="case-box">
+            <text class="title">{{vrBathroom.data[0].name}}</text>
+            <text class="intro">{{vrBathroom.data[0].description}}</text>
+            <view class="info-box">
+                <text class="item">{{vrBathroom.data[0].acreage}}㎡ |</text>
+                <text class="item">{{vrBathroom.data[0].juZhuangType}} |</text>
+                <text class="item">{{vrBathroom.data[0].decorationStyle}} |</text>
+                <text class="item {{vrKitchen.data[0].discountPrice>0 ? 'oldPrice' : ''}}">￥{{vrBathroom.data[0].totalPrice}}</text>
+                <view class="newPrice" wx:if="{{vrKitchen.data[0].discountPrice>0}}">￥{{vrBathroom.data[0]}}</view>
             </view>
-            <view class="new-price" wx:if="{{vr.bathroom.newPrice.length>0}}">{{vr.bathroom.newPrice}}</view>
         </view>
     </navigator>
     <scroll-view class="vr-list"
                  scroll-x=true
     >
         <view class="item"
-              wx:for="{{vr.bathroom.imgList}}"
+              wx:for="{{vrBathroom.data}}"
               wx:for-item="item"
               wx:key="unique"
         >
             <navigator
                     url="/pages/package-details/package-details?type=bathroom&style={{item.style}}&case={{item.navigator}}">
                 <image class="img"
-                       src="{{imgUrl}}{{item.imgUrl}}{{version}}"
+                       src="{{commonImg}}{{item.imgUrl}}{{version}}"
                        mode="widthFix"
                 ></image>
-                <view class="intro">{{item.intro}}</view>
+                <view class="intro">{{vrBathroom.data[index+1].description}}</view>
             </navigator>
         </view>
     </scroll-view>

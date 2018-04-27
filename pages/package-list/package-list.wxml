@@ -3,7 +3,7 @@
     <view class="kv">
         <image class="kv"
                mode="widthFix"
-               src="{{imgUrl}}{{result.kv}}"
+               src="{{result.kv}}"
         ></image>
         <text class="text">{{result.text}}</text>
     </view>

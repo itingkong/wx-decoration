@@ -1,9 +1,10 @@
 //app.js
 App({
   globalData: {
-    imgUrl: `https://socialtest.icolor.com.cn/static/images/`,    // 图片链接地址前缀（与移动端路径一致）
-    commonImg: `https://socialtest.icolor.com.cn/common/images/`,
-    commonUrl: `https://api.icolor.com.cn`
+    imgUrl: `http://aptest.icolor.com.cn/static/images/`,    // 图片链接地址前缀（与移动端路径一致）
+    commonImg: `https://www.icolor.com.cn`,
+    commonUrl: `https://api.icolor.com.cn`,
+    cityCode:3101,
   },
   // 返回并格式化请求数据
   formatRequestData: function (res) {

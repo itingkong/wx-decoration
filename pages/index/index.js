@@ -6,6 +6,7 @@ Page({
     imgUrl: app.globalData.imgUrl,
     commonImg: app.globalData.commonImg,
     commonUrl: app.globalData.commonUrl,
+    cityCode:app.globalData.cityCode,
     choose: [],
     vrKitchen: null,
     vrBathroom: null,
